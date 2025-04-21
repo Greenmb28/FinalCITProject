@@ -1,0 +1,147 @@
+
+body
+{
+    background-color: #F2D5BB;
+}
+header
+{
+    width: 100%;
+    height: 20vh;
+    background-color: #BF6734;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    font-size: large;
+    
+}
+
+.wrapper 
+{
+    display: flex;
+  }
+
+    h1 
+    {
+    font-size: xx-large;
+    font-family: cursive;
+    color: #F2D5BB;
+  }
+  h2
+  {
+  font-size: large;
+  font-family: cursive;
+  color: #BF8275;
+}
+
+ 
+  button 
+  {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    background-size: cover;
+  }
+  
+  nav ul 
+  {
+    width: 100%;
+    height: 30vh;
+    list-style-type: none;
+    background-color: #324001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  nav ul li 
+  {
+    display: inline-block;
+    margin-right: 100px;
+  }
+  nav ul li:hover 
+  {
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .foods 
+  {
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+    border-radius: 25px;
+    background-size: contain;
+   cursor: pointer;
+    display: grid;
+    
+    
+    
+  }
+  .coffee
+  {
+    width: 80px;
+    height: 80px;
+    border-radius: 25px;
+    cursor: pointer;
+    
+    
+  }
+  .tea
+  {
+    width: 80px;
+    height: 80px;
+    border-radius: 25px;
+  
+    cursor: pointer;
+   
+    
+  }
+  
+
+  .info {
+    flex: 0 1 350px;
+  }
+  
+  .info img {
+    width: 80px;
+    height: auto;
+    border-radius: 50px;
+    position:relative;
+    border: 5px solid #730D28;
+  }
+  .crud_buttons button 
+  {
+    display: inline-block;
+    width: 80px;
+    margin: 8px;
+  
+    font-size: 18px;
+  }
+  .showInfo 
+  {
+    /* flex: 1 0 500px; */
+    font-size: 20px;
+    color:  #324001;
+  }
+  .showInfo input 
+  {
+    font-size: 8px;
+    border: 0.5px dotted red;
+  }
+  .save,
+.close 
+{
+  width: 50px;
+  font-size: 10px;
+  margin: 2px;
+  color: #324001
+}
+.displayLine 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 0.5px solid 730D28;
+  }
