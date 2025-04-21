@@ -1,0 +1,7 @@
+CRUD
+C:Create
+R:Read
+U:Update
+D:Delete
+Purpose: The code is an CRUD menu of a coffee and tea shop. You will be able to go into the web page, click the different coffee and tea icons and add to the already started menu, update the menu, view the menu and delete it. 
+For this assignment I went off of what I learned in the class and gave my own design to it. I started with create and used html to get the content. I used the else statement I learned where you do ? function() : function() to make it where the coffee and tea were in separate categories. I then added the create button for the user to create their own teas and coffees. I used an target object to identify and elements event. After create I went on to read, and started with viewing the already predesigned array drinks. I created a function that would show the info given and then a .html. Next I went to the update function. I did a display line to show the drinks and then created an current text field for the user to add their own info in. I added update lines and a handler that would save the users input.  After that I went to the delete function and by using parameters to find the class the user would want to delete. I used splice for the user to easily delete the selected info from the array and then added an handeler to save the changes. At the beginning of the code I did an alert introducing the basic purpose of the code.
