@@ -44,8 +44,7 @@ $(`.foods`).prepend(newParagraph);
 $(".crud_buttons .create").on("click", createHandler);
 $(".displayLine button").on("click", (e) => {
   const target = $(e.target);
-  // Examine the target object - this will give the class of the item
-  //console.log(target["0"]);
+  
   readFood(target["0"]);
 });
 
@@ -60,7 +59,7 @@ const readFood = (element) =>
     );
     let indexdrink = $(`button.${elementClass}`).index(element);
     console.log("index of drinks ", indexdrink);
-    //console.log(rinkss[indexdrink]);
+   
  
 
   if (indexdrink >= 0)
@@ -82,7 +81,7 @@ const viewHandler = (index) => {
   );
   info.find(".close").on("click", () => {
     setTimeout(function () {
-      // !!! Use .html to reset the content
+     //reset
       info.html("");
     }, 1000);
   });
@@ -128,8 +127,7 @@ const updateFood = (index) =>
   $(".displayLine button").on("click", (e) => 
     {
     const target = $(e.target);
-    console.log(target);
-    console.log(target["0"]);
+    
     readFood(target["0"]);
   });
 });
@@ -147,7 +145,7 @@ const createHandler = () =>
   $("button.create").prop("disabled", true);
   console.log("Creating a new item for the menus");
 
-  // Create an element showing the text fields with sample values
+  
   let newParagraph =
     $(`<input type="text" id="new_name" value = 'name' size="50"/> 
     contains 
@@ -157,7 +155,7 @@ const createHandler = () =>
     calories and has 
     <input type="text" id="new_flavor" value = 'flavor' size="50">
     as thier flavors >.<button class="save_new">Save</button>`);
-  // Add this AFTER the create button
+ 
   $(".crud_buttons .create").after(newParagraph);
 
   $(".save_new").on("click", function () {
@@ -170,16 +168,14 @@ const createHandler = () =>
       
     };
 
-    console.log("------->>>>", newFood);
+   
     foods.push(newFood);
     console.log(foods);
     
 
-    // area, below - this is the element with the list of animals
-    // ... need to add new animal descriptive elements to this
+  
     let area = $(`.foods .${panel_class}`);
-    // !!! Add the new animal to the div of class described by panel_class,
-    // inside the element of class animals
+ 
     let foodLine = $(
       `<div class="displayLine">
           <div class = "info">${newFood.drinkName} <img src="./images/genericdrink.png"/> </div>
@@ -190,20 +186,18 @@ const createHandler = () =>
 
     area.append(foodLine);
 
-    // Now, there are no click handlers associated with the buttons for the new animal.
-    // Have to add the click handlers here
+  
     $(".displayLine button").on("click", (e) => {
       const target = $(e.target);
-      // Examine the target object - this will give the class of the item
-      console.log(target);
-      console.log(target["0"]);
+     
+    
       readFood(target["0"]);
     });
 
-    // Enable the create button
+  
     $("button.create").prop("disabled", false);
 
-    // Remove the create para
+
     newParagraph.remove();
   });
 };
